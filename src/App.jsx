@@ -1,8 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import ListBanks from "./pages/ListBanks";
 
 function App() {
-  return <h2>HOLA</h2>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ListBanks />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
